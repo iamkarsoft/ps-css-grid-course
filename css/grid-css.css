@@ -1,18 +1,50 @@
-html,body{
+html,
+body {
   height: 100%;
+  color: gray;
 }
 
-body{
+/* exercise 2 */
+body {
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: 15em auto 15em;
-  grid-template-rows: min-content auto min-content;
 }
 
+article {
+  display: grid;
+  margin: 1em;
+}
 
-header,footer{
-  grid-column-start:1;
-  grid-column-end:4;
+aside,
+nav {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin: 1em;
+  gap: 1em;
+}
+
+main {
+  grid-column-start: 4;
+  grid-column-end: 12;
+  margin: 1em;
+  gap: 1em;
+}
+
+article {
+  grid-column-start: 1;
+  grid-column-end: 12;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 1em;
+  gap: 1em;
+}
+
+header,
+footer {
+  gap:1em;
   background: blue;
+  grid-column-start: 1;
+  grid-column-end: 12;
+  grid-template-rows: 1fr;
 }
